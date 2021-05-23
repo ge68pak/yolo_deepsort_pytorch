@@ -18,6 +18,7 @@ from model_64 import Net
 
 parser = argparse.ArgumentParser(description="Train on mars")
 parser.add_argument("--data-dir",default='./data_mars',type=str)
+# parser.add_argument("--data-dir",default='./data_market1501',type=str)
 parser.add_argument("--no-cuda",action="store_true")
 parser.add_argument("--gpu-id",default=0,type=int)
 parser.add_argument("--lr",default=0.1, type=float)
@@ -35,6 +36,7 @@ if torch.cuda.is_available() and not args.no_cuda:
 root = args.data_dir
 train_dir = os.path.join(root,"train")
 test_dir = os.path.join(root,"test")
+# test_dir = os.path.join(root,"val")
 transform_train = torchvision.transforms.Compose([
     torchvision.transforms.RandomCrop((128,64),padding=4),
     torchvision.transforms.RandomHorizontalFlip(),
