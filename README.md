@@ -68,6 +68,13 @@ dataset Mars Preparation  https://www.kaggle.com/twoboysandhats/mars-motion-anal
 
 Then you can try [train.py](deep_sort/deep/train.py) to train your own parameter and evaluate it using [test.py](deep_sort/deep/test.py) and [evaluate.py](deep_sort/deep/evalute.py).
 
+注意model和checkpoint的版本匹配问题
+
+import Net + dataset路径 + checkpoint路径 + save路径 + 保存jpg名称
+
+从头开始训练python3 train.py   
+
+迁移学习训练python3 train_transfer.py --resume
 
 ## References
 https://github.com/ZQPei/deep_sort_pytorch
